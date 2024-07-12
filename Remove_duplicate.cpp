@@ -49,6 +49,7 @@ int main()
 
     // removeDuplicates() returns new size of array.
     n = removeDuplicates(arr, n);
+     cout<<n<<",";
 
     // Print updated array
     for (int i = 0; i < n; i++)
