@@ -1,16 +1,9 @@
 class Solution(object):
-    def maxArea(self, height):
-        l = 0
-        r = len(height) - 1
-        max_area = 0
+    def maxSubArray(self, nums):
+        curr_sum = max_sum = nums[0]
 
-        while l < r:
-            area = min(height[l], height[r]) * (r - l)
-            max_area = max(max_area, area)
+        for i in range(1, len(nums)):
+            curr_sum = max(curr_sum + nums[i] , nums[i])
+            max_sum = max(curr_sum, max_sum)
 
-            if height[l] < height[r]:
-                l += 1
-            else:
-                r -= 1
-
-        return max_area
+        return max_sum
