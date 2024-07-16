@@ -1,0 +1,16 @@
+public class FindLastOccurrence {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 2, 4, 5, 2};
+        int elementToFind = 2;
+        int lastIndex = findLastOccurrence(array, elementToFind);
+
+        if (lastIndex != -1) {
+            System.out.println("Last occurrence of " + elementToFind + " is at index: " + lastIndex);
+        } else {
+            System.out.println(elementToFind + " not found in the array.");
+        }
+    }
+
+    public static int findLastOccurrence(int[] array, int element) {
+        for (int i = array.length - 1; i >= 0; i--) {
+            if (array[i] == element)
